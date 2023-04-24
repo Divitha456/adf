@@ -1,0 +1,32 @@
+{
+	"name": "CopyTrueInputDataSet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LinkedService_storagedemo1456",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"gap_file": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().gap_file",
+					"type": "Expression"
+				},
+				"folderPath": "input",
+				"container": "adfdemo456"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

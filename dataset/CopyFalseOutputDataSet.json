@@ -1,0 +1,22 @@
+{
+	"name": "CopyFalseOutputDataSet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LinkedService_storagedemo1456",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "adfdemo-odd-stores"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
